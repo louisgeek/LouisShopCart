@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE"
+    >
+    <!--android:focusable="false" 不占用原有View点击事件-->
+    <CheckBox
+        android:id="@+id/id_cb_select_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:focusable="false"
+        android:button="@drawable/selector_check_bg"/>
+    <ImageView
+        android:id="@+id/id_iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/id_cb_select_child"
+        android:padding="10dp"
+        android:src="@mipmap/ic_launcher"
+        />
+    <LinearLayout
+        android:id="@+id/id_ll_normal"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/id_iv_logo"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+    <TextView
+        android:id="@+id/tv_items_child"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商品名称"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_items_child_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="颜色规格描述"
+        >
+    </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/id_tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="@string/price"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/id_tv_discount_price"
+                android:text="@string/price"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/id_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/good_count"
+                android:textSize="12dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- android:visibility="gone"-->
+    <LinearLayout
+        android:id="@+id/id_ll_edtoring"
+        android:layout_toRightOf="@id/id_iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/ll_change_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/id_iv_reduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_reduce"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/id_tv_count_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textSize="14dp" />
+                <ImageView
+                    android:id="@+id/id_iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_add"
+                    android:padding="10dp"
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/id_tv_price_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/price"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="14dp"
+                android:padding="10dp"
+                />
+            <TextView
+                android:id="@+id/id_tv_des_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ll_change_num"
+                android:text="颜色规格描述选择"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="left"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_goods_delete"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#ff5000"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

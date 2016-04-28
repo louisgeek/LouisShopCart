@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_ll_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="horizontal" >
+    <!--记得去掉箭头图   在ExpandableListView中加入android:groupIndicator="@null" -->
+   <!-- <View
+        android:id="@+id/channel_line"
+        android:layout_width="5dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center_vertical"
+        android:background="#79BEF7" />-->
+    <!--android:focusable="false" 不占用原有View点击事件-->
+    <CheckBox
+        android:id="@+id/id_cb_select_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:focusable="false"
+        android:button="@drawable/selector_check_bg"/>
+
+<!--    <ImageView
+        android:id="@+id/iv_img_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_shop"
+        android:layout_toRightOf="@id/id_cb_select"
+        />-->
+    <TextView
+        android:id="@+id/tv_title_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/id_cb_select_parent"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/shop_icon"
+        android:drawableRight="@mipmap/ic_right_icon"
+        android:drawablePadding="10dp"
+        />
+   <!-- <ImageView
+        android:id="@+id/iv_img_parent_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />-->
+    <TextView
+        android:id="@+id/id_tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="编辑"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

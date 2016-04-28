@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LouisShopCart</string>
+    <string name="good_count">x %d</string>
+    <string name="price">￥%s</string>
+    <string name="total_0">合计：￥0.00</string>
+    <string name="total">合计：￥%s</string>
+    <string name="jiesuan_0">结算（0）</string>
+    <string name="jiesuan">结算（%s）</string>
+</resources>
