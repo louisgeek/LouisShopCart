@@ -4,20 +4,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.louis.louisexpandablelistviewdemo.MainActivity">
+
+    <include layout="@layout/header_layout"
+        />
+
+    <RelativeLayout
+        android:id="@+id/id_rl_cart_is_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFCFC"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/id_rl_cart_is_empty_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/ic_shopping_cart_empty"/>
+        <TextView
+            android:id="@+id/id_rl_cart_is_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/id_rl_cart_is_empty_image"
+            android:layout_marginTop="10dp"
+            android:text="购物车为空"/>
+    </RelativeLayout>
+
+    <!--android:background="@mipmap/channel_expandablelistview_bg"
+     android:layout_below="@id/id_inc_top"  有点问题 why?
+    -->
     <ExpandableListView
-        android:id="@+id/id_elv"
+        android:id="@+id/id_elv_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@mipmap/channel_expandablelistview_bg"
         android:cacheColorHint="#00000000"
         android:divider="#ebebeb"
         android:groupIndicator="@null"
         android:dividerHeight="2dp"
         android:footerDividersEnabled="false"
+        android:visibility="visible"
         >
     </ExpandableListView>
-
-    <!--include进来方式可能会导致view覆盖listview的最后一个item  代码里动态改变listview下面的距离-->
+    
+   
+    <!--include进来方式可能会导致view覆盖listview的最后一个item  代码里动态改变listview下面的距离
+    android:layout_below="@id/id_elv" 有点问题 why?
+    -->
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

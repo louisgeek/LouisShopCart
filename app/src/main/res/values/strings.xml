@@ -6,4 +6,6 @@
     <string name="total">合计：￥%s</string>
     <string name="jiesuan_0">结算（0）</string>
     <string name="jiesuan">结算（%s）</string>
+    <string name="cart_title_0">购物车(0)</string>
+    <string name="cart_title">购物车(%s)</string>
 </resources>
